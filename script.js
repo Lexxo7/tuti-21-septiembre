@@ -457,7 +457,7 @@ const recuerdos = {
 
         tipo: "imagen",
 
-        archivo: "fotos/Primer dia.jpeg"
+        archivo: "Fotos/Primer dia.jpeg"
 
     },
 
@@ -471,7 +471,7 @@ const recuerdos = {
 
         tipo: "imagen",
 
-        archivo: "fotos/Llamada.jpeg"
+        archivo: "Fotos/Llamada.jpeg"
 
     },
 
@@ -485,7 +485,7 @@ const recuerdos = {
 
         tipo: "imagen",
 
-        archivo: "fotos/Paseo.jpeg"
+        archivo: "Fotos/Paseo.jpeg"
 
     },
 
@@ -499,7 +499,7 @@ const recuerdos = {
 
         tipo: "video",
 
-        archivo: "videos/Mundial.mp4"
+        archivo: "Videos/Mundial.mp4"
 
     },
 
@@ -513,7 +513,7 @@ const recuerdos = {
 
         tipo: "imagen",
 
-        archivo: "fotos/Flores.jpeg"
+        archivo: "Fotos/Flores.jpeg"
 
     },
 
@@ -527,7 +527,7 @@ const recuerdos = {
 
         tipo: "imagen",
 
-        archivo: "fotos/Dormir.jpeg"
+        archivo: "Fotos/Dormir.jpeg"
 
     }
 
