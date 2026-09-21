@@ -260,15 +260,15 @@ botonSiguienteCinco.addEventListener("click", function () {
 
     } else {
 
-    capituloCinco.classList.remove("activa");
+        capituloCinco.classList.remove("activa");
 
-    capituloSeis.classList.add("activa");
+        capituloSeis.classList.add("activa");
 
-    botonSiguienteSeis.classList.remove("oculto");
+        botonSiguienteSeis.classList.remove("oculto");
 
-    mostrarSiguientePasoSeis();
+        mostrarSiguientePasoSeis();
 
-}
+    }
 
 });
 
@@ -306,6 +306,8 @@ function mostrarSiguientePasoSeis() {
     }
 
 }
+
+
 /* =========================
    BOTÓN CAPÍTULO 6
 ========================= */
@@ -402,14 +404,10 @@ botonPaginaCarta.addEventListener("click", function () {
 
 botonFinalCarta.addEventListener("click", function () {
 
-    // Cerramos el capítulo anterior
     capituloSeis.classList.remove("activa");
 
-    // Abrimos el capítulo 7
     capituloSiete.classList.add("activa");
 
-    // Después de una pequeña pausa,
-    // mostramos la pregunta
     setTimeout(function () {
 
         document
@@ -446,9 +444,15 @@ const cerrarModal =
    INFORMACIÓN DE RECUERDOS
 ========================= */
 
+/*
+   IMPORTANTE:
+   Los nombres coinciden EXACTAMENTE
+   con los data-recuerdo del index.html.
+*/
+
 const recuerdos = {
 
-    "primer-dia": {
+    "Primer-dia": {
 
         titulo: "El primer día 🤝❤️",
 
@@ -462,7 +466,7 @@ const recuerdos = {
     },
 
 
-    "llamaditas": {
+    "Llamaditas": {
 
         titulo: "Nuestras llamaditas 📞❤️",
 
@@ -476,7 +480,7 @@ const recuerdos = {
     },
 
 
-    "paseos": {
+    "Paseos": {
 
         titulo: "Salir a pasear 🚶❤️",
 
@@ -490,7 +494,7 @@ const recuerdos = {
     },
 
 
-    "mundial": {
+    "Mundial": {
 
         titulo: "Mirar partidos juntos ⚽❤️",
 
@@ -504,7 +508,7 @@ const recuerdos = {
     },
 
 
-    "flores": {
+    "Flores": {
 
         titulo: "Las flores 💐❤️",
 
@@ -518,7 +522,7 @@ const recuerdos = {
     },
 
 
-    "dormir": {
+    "Dormir": {
 
         titulo: "Dormir juntos 🛏️❤️",
 
@@ -562,7 +566,9 @@ tarjetasRecuerdo.forEach(function (tarjeta) {
         let mediaHTML = "";
 
 
-        /* FOTO */
+        /* =========================
+           FOTO
+        ========================= */
 
         if (recuerdo.tipo === "imagen") {
 
@@ -579,7 +585,9 @@ tarjetasRecuerdo.forEach(function (tarjeta) {
         }
 
 
-        /* VIDEO */
+        /* =========================
+           VIDEO
+        ========================= */
 
         if (recuerdo.tipo === "video") {
 
@@ -605,7 +613,9 @@ tarjetasRecuerdo.forEach(function (tarjeta) {
         }
 
 
-        /* CONTENIDO MODAL */
+        /* =========================
+           CONTENIDO MODAL
+        ========================= */
 
         contenidoModal.innerHTML = `
 
@@ -653,13 +663,17 @@ modalRecuerdo.addEventListener("click", function (event) {
     }
 
 });
+
+
 /* =========================
    CAPÍTULO 7
    PROPUESTA
 ========================= */
 
 const botonNo = document.getElementById("botonNo");
+
 const botonObvio = document.getElementById("botonObvio");
+
 const botonVolverPregunta =
     document.getElementById("botonVolverPregunta");
 
@@ -673,7 +687,9 @@ const respuestaPropuesta =
     document.getElementById("respuestaPropuesta");
 
 
-/* SI ELIGE "QUE ASCO, NO" */
+/* =========================
+   SI ELIGE "QUE ASCO, NO"
+========================= */
 
 function rechazarPropuesta() {
 
@@ -686,7 +702,9 @@ function rechazarPropuesta() {
 }
 
 
-/* SI ELIGE "OBVIO QUE SÍ" */
+/* =========================
+   SI ELIGE "OBVIO QUE SÍ"
+========================= */
 
 function aceptarPropuesta() {
 
@@ -699,7 +717,9 @@ function aceptarPropuesta() {
 }
 
 
-/* VOLVER A LA PREGUNTA */
+/* =========================
+   VOLVER A LA PREGUNTA
+========================= */
 
 function volverAPregunta() {
 
@@ -713,13 +733,30 @@ function volverAPregunta() {
 
 
 if (botonNo) {
-    botonNo.addEventListener("click", rechazarPropuesta);
+
+    botonNo.addEventListener(
+        "click",
+        rechazarPropuesta
+    );
+
 }
+
 
 if (botonObvio) {
-    botonObvio.addEventListener("click", aceptarPropuesta);
+
+    botonObvio.addEventListener(
+        "click",
+        aceptarPropuesta
+    );
+
 }
 
+
 if (botonVolverPregunta) {
-    botonVolverPregunta.addEventListener("click", volverAPregunta);
+
+    botonVolverPregunta.addEventListener(
+        "click",
+        volverAPregunta
+    );
+
 }
